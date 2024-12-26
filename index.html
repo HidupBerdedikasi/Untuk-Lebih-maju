@@ -209,6 +209,48 @@
       .product {
         padding: 15px;
       }
+
+      .cta-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 1rem;
+        margin: 5px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 80px 20px;
+      }
+
+      .hero h2 {
+        font-size: 1.75rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .cta-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+
+      .product h3 {
+        font-size: 1.25rem;
+      }
+
+      footer .social-media a {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -368,29 +410,3 @@
 
 </body>
 </html>
-<script>
-    // Fungsi untuk mengirim pesan ke WhatsApp
-    function sendToWhatsApp(event) {
-      event.preventDefault(); // Menghentikan pengiriman form standar
-
-      // Mengambil nilai dari input form
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var message = document.getElementById("message").value;
-
-      // Membuat pesan yang akan dikirim
-      var text = "Halo, saya ingin menghubungi Anda melalui website Hidup Berdedikasi.%0A%0A" +
-                  "Nama: " + encodeURIComponent(name) + "%0A" +
-                  "Email: " + encodeURIComponent(email) + "%0A" +
-                  "Pesan: " + encodeURIComponent(message);
-
-      // Nomor WhatsApp yang akan dikirimi pesan
-      var phoneNumber = "628975017205"; // Ganti dengan nomor WhatsApp Anda
-
-      // URL WhatsApp dengan parameter pesan
-      var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + text;
-
-      // Membuka WhatsApp dengan pesan
-      window.open(whatsappURL, '_blank');
-    }
-</script>
