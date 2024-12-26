@@ -23,7 +23,6 @@
       cursor: pointer;
       border-radius: 5px;
       text-align: center;
-      font-size: 1rem;
     }
 
     .product-button:hover {
@@ -110,7 +109,7 @@
 
     /* Product Section */
     .products {
-      padding: 50px 20px;
+      padding: 50px 0;
       background-color: #f4f4f4;
     }
 
@@ -122,7 +121,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 20px;
-      justify-items: center;
     }
 
     .product {
@@ -131,7 +129,6 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
-      text-align: center;
     }
 
     .product img {
@@ -152,7 +149,7 @@
     /* Contact Section */
     .contact {
       background-color: #fff;
-      padding: 50px 20px;
+      padding: 50px 0;
     }
 
     .contact input,
@@ -162,7 +159,6 @@
       margin-bottom: 20px;
       border-radius: 5px;
       border: 1px solid #ddd;
-      font-size: 1rem;
     }
 
     .contact button {
@@ -172,7 +168,6 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 1rem;
     }
 
     .contact button:hover {
@@ -199,28 +194,9 @@
     }
 
     /* Responsive Design */
-    @media (max-width: 1024px) {
-      .hero h2 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-      }
-
-      .cta-btn {
-        padding: 8px 16px;
-      }
-    }
-
     @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-        text-align: center;
-      }
-
       .hero {
-        padding: 80px 20px;
+        padding: 50px 20px;
       }
 
       .hero h2 {
@@ -231,6 +207,11 @@
         font-size: 1rem;
       }
 
+      .cta-btn {
+        font-size: 1rem;
+        padding: 8px 15px;
+      }
+
       .product-list {
         grid-template-columns: 1fr 1fr;
       }
@@ -239,50 +220,30 @@
         padding: 15px;
       }
 
-      .cta-btn {
-        padding: 10px 15px;
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
       }
 
-      .contact input,
-      .contact textarea {
-        font-size: 0.95rem;
-      }
-
-      .contact button {
-        font-size: 0.95rem;
-        padding: 12px 25px;
+      .logo {
+        font-size: 1.5rem;
       }
     }
 
+    /* For very small screens */
     @media (max-width: 480px) {
-      .hero {
-        padding: 60px 20px;
+      .product h3 {
+        font-size: 1.2rem;
       }
 
-      .hero h2 {
-        font-size: 1.8rem;
-      }
-
-      .hero p {
+      .product-button {
+        padding: 6px 12px;
         font-size: 0.9rem;
       }
 
-      .product-list {
-        grid-template-columns: 1fr;
-      }
-
-      .product {
-        padding: 12px;
-      }
-
-      footer .social-media {
-        display: flex;
-        justify-content: center;
-      }
-
-      footer .social-media a {
-        font-size: 20px;
-        margin: 0 8px;
+      .cta-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
       }
     }
   </style>
@@ -333,4 +294,15 @@
           <img src="bbb.jpg" alt="Produk 2">
           <h3>BrainBoost - Suka Baca Buku</h3>
           <div class="product-buttons">
-            <button class
+            <button class="product-button" onclick="toggleDescription(2)">Deskripsi</button>
+            <button class="product-button" onclick="buyProduct(2)">Beli</button>
+          </div>
+          <div id="description-2" class="product-description">
+            <p>Ini adalah deskripsi lengkap untuk Produk 2. Produk ini sangat bermanfaat untuk ...</p>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="ccc.jpg" alt="Produk 3">
+          <h3>BrainBoost Relaxation Hilangkan Stress & Anxiety</h3>
+         
